@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html manifest="sfdc.appcache">
+  <head>
+    <title>Wayfair Supplier Edge Access Application</title>
+    <link type="text/css" rel="stylesheet" href="css/jsgrid.min.css">
+    <link type="text/css" rel="stylesheet" href="css/jsgrid-theme.min.css">
+  </head>
+  <body>
+
+    Wayfair Supplier Edge Access Application
+    <hr>
+    <div id="grid"></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jsgrid.min.js"></script>
+    <script>
+      var data = JSON.parse('{{{json}}}');
+        console.log(data);
+        $('#grid').jsGrid({
+        width: '100%',
+        height: '400px',
+        sorting: true,
+        paging: true,
+        pageSize: 5,
+        data: data,
+        fields: [
+          { name: 'Id', type: 'text' },
+          { name: 'Name', type: 'text' }
+        ]
+        });
+    </script>
+  </body>
+</html>
+

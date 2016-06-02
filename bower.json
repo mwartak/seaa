@@ -1,0 +1,21 @@
+{
+  "name": "sfdc-offline",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Martin Wartak <martinwartak@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "jsgrid": "js-grid#^1.4.1"
+  }
+}

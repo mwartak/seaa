@@ -1,0 +1,23 @@
+{
+  "name": "sfdc-offline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "good": "^7.0.1",
+    "good-console": "^6.1.2",
+    "handlebars": "^4.0.5",
+    "hapi": "^13.4.1",
+    "inert": "^4.0.0",
+    "jsforce": "^1.6.5",
+    "moment": "^2.13.0",
+    "path": "^0.12.7",
+    "vision": "^4.1.0"
+  }
+}
