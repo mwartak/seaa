@@ -3,6 +3,7 @@
 const Hapi = require('hapi');
 const path = require('path');
 const jsforce = require('jsforce');
+const config = require('./config');
 
 const server = new Hapi.Server();
 server.connection({ port: process.env.PORT || 3000 });
@@ -78,7 +79,7 @@ server.start((err) => {
 
 function getSfdcData(request, reply) {
   var conn = new jsforce.Connection();
-  conn.login('martin@teralon.com', 'Sugar.L1d2mujiSpXNFQ6p0sBV4V4se6PkY', function(err, res) {
+  conn.login(config.sfdc.username, config.sfdc.password, function(err, res) {
     if (err) { return console.error(err); }
     conn.query('SELECT Id, Name FROM Account', function(err, res) {
       if (err) { return console.error(err); }
